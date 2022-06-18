@@ -1,0 +1,157 @@
+{
+  "openapi": "3.0.0",
+  "info" : {
+    "title": "Documentations API Params",
+    "description": "Documentation for API with example of params in every API",
+    "version": "1.0.0"
+  },
+  
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local Server"
+    }
+  ],
+  
+  "schemes": ["http"],
+  
+  "paths": {
+    "/body": {
+      "post": {
+        "summary": "Request API with Body params",
+        "description": "Request API with Body params Description",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "type": "string",
+                    "example": "Example content"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "content": {
+                      "type": "string",
+                      "example": "Example content"
+                    },
+                    "author": {
+                      "type": "string",
+                      "example": "Leonardo Frederiche"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "/route/{content}": {
+      "get": {
+        "summary": "Request APi with Param in Route",
+        "description": "Send a request to API with param in URL",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "content",
+            "description": "Content in String to send for API",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 2
+                    },
+                    "content": {
+                      "type": "string",
+                      "example": "Example content"
+                    },
+                    "author": {
+                      "type": "string",
+                      "example": "Leonardo Frederiche"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/query": {
+      "get": {
+        "summary": "Request APi with Param in Query route",
+        "description": "Send a request to API with param in Query route",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "content",
+            "description": "Content in String to send for API",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 3
+                    },
+                    "content": {
+                      "type": "string",
+                      "example": "Example content"
+                    },
+                    "author": {
+                      "type": "string",
+                      "example": "Leonardo Frederiche"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
