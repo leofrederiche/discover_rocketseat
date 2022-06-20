@@ -46,7 +46,6 @@ This project have implemetation of Swagger to API documentation.
 ```
 Consuming Github API using library Axios.
 ```
-### Languages & Technologies
 <img 
     alt="NodeJS" 
     placeholder="NodeJS"
