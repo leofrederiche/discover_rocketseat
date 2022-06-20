@@ -59,3 +59,15 @@ Consuming Github API using library Axios.
     src="./assets/logo_axios.png"
     style="width: 150px;"
 />
+
+---
+
+## Lesson04 - Front-end with API
+```
+Create a front-end to consuming a Express node API
+```
+<img 
+    alt="Node.JS Logo" 
+    src="./assets/logo_nodejs.png" 
+    style="width: 50px;" 
+/>
