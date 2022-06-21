@@ -60,7 +60,7 @@ Consuming Github API using library Axios.
 
 ---
 
-## Lesson04 - Front-end with API
+## Lesson04 - Front-end with Fetch
 ```
 Create a front-end to consuming a Express node API
 ```

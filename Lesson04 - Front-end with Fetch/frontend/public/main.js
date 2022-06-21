@@ -40,6 +40,28 @@ const addUser = () => {
         .catch( error => console.log(error) )
 }
 
+const changeUser = {
+    name: "Heloisa Frederiche",
+    avatar: "https://i.pinimg.com/originals/43/4e/3e/434e3e8b6c88779dd5f68706ca28bfa8.jpg",
+    city: "Pindamonhangaba"
+}
+
+const updateUser = (id) => {
+    fetch(`${url}/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(changeUser),
+        headers: {
+            "content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then( response => response.json())
+        .then( data => {
+            apiNotification.textContent = data 
+        })
+        .catch( error => console.log(error))
+}
+
 getUsers()
-getUser(2)
-addUser()
+getUser(1)
+// addUser()
+updateUser(1)
