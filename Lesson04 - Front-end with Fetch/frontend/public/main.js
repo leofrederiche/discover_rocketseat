@@ -1,4 +1,4 @@
-// Local API like BACKEND
+// Local BACKEND API
 const url = "http://localhost:3000/api"
 
 const getUsers = () => {
@@ -19,12 +19,6 @@ const getUser = (id) => {
         .catch( error => console.error(error))
 }
 
-const newUser = {
-    name: "Maria Eduarda",
-    avatar: "https://pps.whatsapp.net/v/t61.24694-24/225043864_138098855475195_3648358203373206951_n.jpg?ccb=11-4&oh=c6576f651b637cf0ddbadf9ff531e5a4&oe=62BF43C8",
-    city: "Pindamonhangaba"
-}
-
 const addUser = () => {
     fetch(url, {
         method: "POST",
@@ -38,12 +32,6 @@ const addUser = () => {
             apiNotification.textContent = data
         })
         .catch( error => console.log(error) )
-}
-
-const changeUser = {
-    name: "Heloisa Frederiche",
-    avatar: "https://i.pinimg.com/originals/43/4e/3e/434e3e8b6c88779dd5f68706ca28bfa8.jpg",
-    city: "Pindamonhangaba"
 }
 
 const updateUser = (id) => {
@@ -61,7 +49,35 @@ const updateUser = (id) => {
         .catch( error => console.log(error))
 }
 
+const deleteUser = (id) => {
+    fetch(`${url}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then( response => response.json() )
+        .then( data => {
+            apiNotification.textContent = data
+        })
+        .catch( error => console.log(error))
+}
+
 getUsers()
 getUser(1)
+
+const newUser = {
+    name: "Maria Eduarda",
+    avatar: "https://pps.whatsapp.net/v/t61.24694-24/225043864_138098855475195_3648358203373206951_n.jpg?ccb=11-4&oh=c6576f651b637cf0ddbadf9ff531e5a4&oe=62BF43C8",
+    city: "Pindamonhangaba"
+}
 // addUser()
-updateUser(1)
+
+const changeUser = {
+    name: "Heloisa Frederiche",
+    avatar: "https://i.pinimg.com/originals/43/4e/3e/434e3e8b6c88779dd5f68706ca28bfa8.jpg",
+    city: "Pindamonhangaba"
+}
+// updateUser(1)
+
+// deleteUser(2)
