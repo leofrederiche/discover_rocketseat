@@ -8,4 +8,16 @@ function getUsers() {
     .catch( error => console.error(error))
 }
 
+function getUser(id) {
+    axios.get(`${url}/${id}`)
+    .then( response => {
+        const { name, avatar, city } = response.data
+        userName.textContent = name
+        userAvatar.src = avatar
+        userCity.textContent = city
+    })
+    .catch( error => console.error(error))
+}
+
 getUsers()
+getUser(1)
