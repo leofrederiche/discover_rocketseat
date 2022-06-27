@@ -30,6 +30,16 @@ function addUser(user) {
     .catch( error => console.error(error))
 }
 
+function updateUser(params) {
+    const { id, user } = params
+
+    axios.put(`${url}/${id}`, user)
+    .then( response => {
+        apiNotification.textContent = JSON.stringify(response.data)
+    })
+    .catch( error => console.error(error))
+}
+
 getUsers()
 getUser(1)
 
@@ -38,4 +48,11 @@ const newUser = {
     avatar: "https://picsum.photos/200/200",
     city: "Taubate - SP"
 }
-addUser(newUser)
+// addUser(newUser)
+
+const modifiedUser = {
+    name: "Heloisa Camp",
+    avatar: "https://picsum.photos/200/200",
+    city: "Campos - SP"
+}
+updateUser({ id: 1, user: modifiedUser})
