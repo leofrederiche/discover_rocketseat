@@ -62,7 +62,7 @@ Consuming Github API using library Axios.
 
 ## Lesson04 - Front-end with Fetch
 ```
-Create a front-end to consuming a Express node API
+Create a front-end to consuming a Express node API using Fetch
 ```
 <img 
     alt="Node.JS Logo" 
@@ -74,3 +74,25 @@ Create a front-end to consuming a Express node API
     src="https://i.imgur.com/bWRuTLP.png" 
     style="height: 30px;"
 />
+
+---
+
+## Lesson05 - Front-end with Axios
+```
+Create a front-end to consuming a Express node API using Axios
+```
+<img 
+    alt="Node.JS Logo" 
+    src="https://i.imgur.com/4j0IIon.png" 
+    style="height: 30px;"
+/>&nbsp;&nbsp;&nbsp;
+<img 
+    alt="Node.JS Logo" 
+    src="https://i.imgur.com/bWRuTLP.png" 
+    style="height: 30px;"
+/>&nbsp;&nbsp;&nbsp;
+<img 
+    alt="Node.JS Logo" 
+    src="https://i.imgur.com/doNJBML.png" 
+    style="height: 30px;"
+/>&nbsp;&nbsp;&nbsp;
