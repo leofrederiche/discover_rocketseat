@@ -1,8 +1,11 @@
-const url = "localhost:3000/api"
+const url = "http://localhost:3000/api"
 
-function getUser() {
-    axios.get("/")
+function getUsers() {
+    axios.get(url)
     .then( response => {
-        apiResult.textContent = JSON.stringify(response.body)
+        apiResult.textContent = JSON.stringify(response.data)
     })
+    .catch( error => console.error(error))
 }
+
+getUsers()
