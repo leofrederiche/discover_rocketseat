@@ -40,6 +40,14 @@ function updateUser(params) {
     .catch( error => console.error(error))
 }
 
+function deleteUser(id) {
+    axios.delete(`${url}/${id}`)
+    .then( response => {
+        apiNotification.textContent = JSON.stringify(response.data)
+    })
+    .catch( error => console.error(error))
+}
+
 getUsers()
 getUser(1)
 
@@ -55,4 +63,6 @@ const modifiedUser = {
     avatar: "https://picsum.photos/200/200",
     city: "Campos - SP"
 }
-updateUser({ id: 1, user: modifiedUser})
+// updateUser({ id: 1, user: modifiedUser})
+
+deleteUser(1)
